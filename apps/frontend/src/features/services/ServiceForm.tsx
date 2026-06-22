@@ -6,7 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { createServiceSchema, type CreateServiceInput, Criticality, ServiceStatus } from '@dbrs/shared';
 import type { Service } from '@dbrs/shared';
 import { Input } from '@/components/ui/Input';
-import { Select } from '@/components/ui/Select';
+import Select  from '@/components/ui/Select';
 import { Button } from '@/components/ui/Button';
 
 const criticalityOptions = Object.values(Criticality).map((v) => ({

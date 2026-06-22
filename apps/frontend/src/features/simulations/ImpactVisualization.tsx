@@ -12,8 +12,8 @@ import {
 } from 'recharts';
 import type { BlastRadiusResult, SeverityResult } from '@dbrs/shared';
 import { SeverityClassification } from '@dbrs/shared';
-import { Card, CardHeader } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/Badge';
+import CardHeader, { Card } from '@/components/ui/Card';
+import Badge from '@/components/ui/Badge';
 
 const severityColors: Record<SeverityClassification, string> = {
   [SeverityClassification.LOW]: '#64748b',

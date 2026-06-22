@@ -4,10 +4,10 @@ import { Activity, Server, GitBranch, PlayCircle, AlertTriangle } from 'lucide-r
 import Link from 'next/link';
 import { AppShell } from '@/components/layout/AppShell';
 import { useHealthDashboard } from '@/hooks/use-health';
-import { Card, CardHeader } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/Badge';
+import CardHeader, { Card } from '@/components/ui/Card';
+import Badge from '@/components/ui/Badge';
 import { SkeletonCard } from '@/components/ui/Skeleton';
-import { EmptyState } from '@/components/ui/EmptyState';
+import EmptyState from '@/components/ui/EmptyState';
 import { Button } from '@/components/ui/Button';
 import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '@/components/ui/Table';
 import { formatDate, formatNumber } from '@/lib/utils';

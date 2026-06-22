@@ -5,7 +5,7 @@ import { Criticality, ServiceStatus } from '@dbrs/shared';
 import type { ServiceFilterInput } from '@dbrs/shared';
 import { Search, Filter } from 'lucide-react';
 import { Input } from '@/components/ui/Input';
-import { Select } from '@/components/ui/Select';
+import Select from '@/components/ui/Select';
 import { Button } from '@/components/ui/Button';
 import { cn } from '@/lib/utils';
 

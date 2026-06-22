@@ -1,9 +1,9 @@
 'use client';
 
 import { AppShell } from '@/components/layout/AppShell';
-import { Card, CardHeader } from '@/components/ui/Card';
+import CardHeader, { Card } from '@/components/ui/Card';
 import { Input } from '@/components/ui/Input';
-import { Badge } from '@/components/ui/Badge';
+import Badge from '@/components/ui/Badge';
 import { API_BASE } from '@/lib/api';
 
 export default function SettingsPage() {

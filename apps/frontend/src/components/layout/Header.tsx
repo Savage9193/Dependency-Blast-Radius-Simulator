@@ -3,7 +3,7 @@
 import { Menu, Wifi, WifiOff, Loader2 } from 'lucide-react';
 import { useUiStore } from '@/store/ui-store';
 import { useSocketContext } from '@/providers/socket-provider';
-import { Badge } from '@/components/ui/Badge';
+import Badge from '@/components/ui/Badge';
 
 export function Header({ title, description }: { title: string; description?: string }) {
   const setMobileSidebarOpen = useUiStore((s) => s.setMobileSidebarOpen);

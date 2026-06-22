@@ -17,9 +17,9 @@ import {
 } from 'recharts';
 import { Criticality } from '@dbrs/shared';
 import { useAnalytics } from '@/hooks/use-health';
-import { Card, CardHeader } from '@/components/ui/Card';
+import CardHeader, { Card } from '@/components/ui/Card';
 import { SkeletonCard } from '@/components/ui/Skeleton';
-import { EmptyState } from '@/components/ui/EmptyState';
+import EmptyState from '@/components/ui/EmptyState';
 import { BarChart3 } from 'lucide-react';
 
 const CRITICALITY_COLORS: Record<Criticality, string> = {

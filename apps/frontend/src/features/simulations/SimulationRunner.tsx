@@ -10,8 +10,8 @@ import { useRunSimulation } from '@/hooks/use-simulations';
 import type { SimulationRunResponse } from '@/lib/api';
 import { Input } from '@/components/ui/Input';
 import { Button } from '@/components/ui/Button';
-import { Card, CardHeader } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/Badge';
+import CardHeader, { Card } from '@/components/ui/Card';
+import Badge from '@/components/ui/Badge';
 import { BlastRadiusResults } from './BlastRadiusResults';
 import { ImpactVisualization } from './ImpactVisualization';
 

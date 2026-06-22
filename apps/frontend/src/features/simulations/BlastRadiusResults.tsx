@@ -1,8 +1,8 @@
 'use client';
 
 import type { BlastRadiusResult } from '@dbrs/shared';
-import { Card, CardHeader } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/Badge';
+import CardHeader, { Card } from '@/components/ui/Card';
+import Badge from '@/components/ui/Badge';
 import { formatNumber } from '@/lib/utils';
 
 export interface BlastRadiusResultsProps {

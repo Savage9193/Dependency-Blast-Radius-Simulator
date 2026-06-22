@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { AppShell } from '@/components/layout/AppShell';
 import { AnalyticsCharts } from '@/features/analytics/AnalyticsCharts';
-import { Select } from '@/components/ui/Select';
+import Select from '@/components/ui/Select';
 
 const dayOptions = [
   { value: '7', label: 'Last 7 days' },

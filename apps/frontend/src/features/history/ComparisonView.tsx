@@ -5,8 +5,8 @@ import { X } from 'lucide-react';
 import { useCompareSimulations } from '@/hooks/use-simulations';
 import { Modal } from '@/components/ui/Modal';
 import { Button } from '@/components/ui/Button';
-import { Card, CardHeader } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/Badge';
+import CardHeader, { Card } from '@/components/ui/Card';
+import Badge from '@/components/ui/Badge';
 import { SkeletonCard } from '@/components/ui/Skeleton';
 import { formatNumber } from '@/lib/utils';
 

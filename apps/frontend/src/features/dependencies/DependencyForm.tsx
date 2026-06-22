@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { createDependencySchema, type CreateDependencyInput } from '@dbrs/shared';
 import { useServices } from '@/hooks/use-services';
-import { Select } from '@/components/ui/Select';
+import Select  from '@/components/ui/Select';
 import { Button } from '@/components/ui/Button';
 
 export interface DependencyFormProps {
