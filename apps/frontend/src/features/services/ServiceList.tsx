@@ -11,9 +11,9 @@ import { Button } from '@/components/ui/Button';
 import { Modal } from '@/components/ui/Modal';
 import { ConfirmDialog } from '@/components/ui/ConfirmDialog';
 import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '@/components/ui/Table';
-import { Badge } from '@/components/ui/Badge';
+import Badge from '@/components/ui/Badge';
 import { Pagination } from '@/components/ui/Pagination';
-import { EmptyState } from '@/components/ui/EmptyState';
+import EmptyState from '@/components/ui/EmptyState';
 import { SkeletonCard } from '@/components/ui/Skeleton';
 import { formatDate } from '@/lib/utils';
 
