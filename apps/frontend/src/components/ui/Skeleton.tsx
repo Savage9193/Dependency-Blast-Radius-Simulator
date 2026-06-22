@@ -9,7 +9,7 @@ export function Skeleton({ className }: { className?: string }) {
   );
 }
 
-export function SkeletonText({ lines = 3 }: { lines?: number }) {
+export default function SkeletonText({ lines = 3 }: { lines?: number }) {
   return (
     <div className="space-y-2" aria-label="Loading content">
       {Array.from({ length: lines }).map((_, i) => (

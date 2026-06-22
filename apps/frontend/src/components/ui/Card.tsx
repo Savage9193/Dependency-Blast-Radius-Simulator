@@ -27,7 +27,7 @@ export function Card({ children, className, padding = 'md' }: CardProps) {
   );
 }
 
-export function CardHeader({
+export default function CardHeader({
   title,
   description,
   action,
