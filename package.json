@@ -8,13 +8,13 @@
   ],
   "scripts": {
     "dev": "concurrently \"npm run dev -w @dbrs/backend\" \"npm run dev -w @dbrs/frontend\"",
-    "build": "npm run build -w @dbrs/shared && npm run build -w @dbrs/backend && npm run build -w @dbrs/frontend",
-    "test": "npm run test -w @dbrs/backend && npm run test -w @dbrs/frontend",
-    "lint": "npm run lint -w @dbrs/backend && npm run lint -w @dbrs/frontend",
+    "build": "npm run build --workspace=@dbrs/shared && npm run build --workspace=@dbrs/backend",
+    "test": "npm run test --workspace=@dbrs/backend && npm run test --workspace=@dbrs/frontend",
+    "lint": "npm run lint --workspace=@dbrs/backend && npm run lint --workspace=@dbrs/frontend",
     "format": "prettier --write \"**/*.{ts,tsx,js,json,md}\"",
-    "db:generate": "npm run db:generate -w @dbrs/backend",
-    "db:migrate": "npm run db:migrate -w @dbrs/backend",
-    "db:seed": "npm run db:seed -w @dbrs/backend"
+    "db:generate": "npm run db:generate --workspace=@dbrs/backend",
+    "db:migrate": "npm run db:migrate --workspace=@dbrs/backend",
+    "db:seed": "npm run db:seed --workspace=@dbrs/backend"
   },
   "devDependencies": {
     "concurrently": "^9.1.2",
