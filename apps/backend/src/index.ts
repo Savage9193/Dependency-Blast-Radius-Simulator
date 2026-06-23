@@ -16,9 +16,18 @@ dotenv.config();
 export function createApp() {
   const env = getEnv();
   const app = express();
-
+  const allowedOrigins = [
+    "http://localhost:3000",
+    "https://dependency-blast-radius-simulator-frontend-jtsspn8xw.vercel.app",
+  ];
   app.use(helmet({ contentSecurityPolicy: false }));
-  app.use(cors({ origin: env.CORS_ORIGIN, credentials: true }));
+  app.use(cors({ origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("CORS blocked"));
+    }
+  }, credentials: true }));
   app.use(express.json({ limit: '1mb' }));
   app.use(
     rateLimit({
