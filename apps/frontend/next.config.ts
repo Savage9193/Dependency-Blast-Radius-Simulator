@@ -1,12 +1,7 @@
-const path = require('path');
+import type { NextConfig } from "next";
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  webpack: (config: any) => {
-    config.transpilePackages = ['@dbrs/shared'];
-    return config;
-  },
-  transpilePackages: ['@dbrs/shared'],
+const nextConfig: NextConfig = {
+  transpilePackages: ["@dbrs/shared"],
 };
 
 export default nextConfig;
