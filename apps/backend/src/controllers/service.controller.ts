@@ -1,5 +1,7 @@
+import { ServiceFilterInput } from '@dbrs/shared';
 import { ServiceService } from '../services/service.service';
 import { getParam } from '../utils/params';
+
 
 const serviceService = new ServiceService();
 
@@ -42,10 +44,11 @@ export class ServiceController {
 
   async list(req: import('express').Request, res: import('express').Response, next: import('express').NextFunction) {
     try {
-      const result = await serviceService.list(req.query as never);
+      const query = (req as any).validatedQuery;
+      const result = await serviceService.list(query as ServiceFilterInput);
       res.json(result);
     } catch (err) {
-      next(err);
+        next(err);
+      }
     }
   }
-}

@@ -21,19 +21,24 @@ export function validateQuery<T>(schema: ZodSchema<T>) {
       next(new AppError(400, 'Validation failed', result.error.flatten()));
       return;
     }
-    req.query = result.data as typeof req.query;
+    (req as any).validatedQuery = result.data;
     next();
   };
 }
 
 export function validateParams<T>(schema: ZodSchema<T>) {
   return (req: Request, _res: Response, next: NextFunction) => {
-    const result = schema.safeParse(req.params);
+    const result = schema.safeParse(req.query);
+
     if (!result.success) {
-      next(new AppError(400, 'Validation failed', result.error.flatten()));
-      return;
+      return _res.status(400).json({
+        success: false,
+        errors: result.error.flatten(),
+      });
     }
-    req.params = result.data as typeof req.params;
+
+    (req as any).validatedQuery = result.data;
+
     next();
   };
 }
