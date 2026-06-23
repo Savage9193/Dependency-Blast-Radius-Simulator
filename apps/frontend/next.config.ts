@@ -3,9 +3,10 @@ const path = require('path');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   webpack: (config: any) => {
-    config.resolve.alias['@'] = path.resolve(__dirname, 'src');
+    config.transpilePackages = ['@dbrs/shared'];
     return config;
   },
+  transpilePackages: ['@dbrs/shared'],
 };
 
-module.exports = nextConfig;
+export default nextConfig;
